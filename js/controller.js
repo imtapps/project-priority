@@ -1,4 +1,4 @@
 ProjectPriority.ProjectController = Ember.ArrayController.extend({
-    sortProperties: ['priority'],
+    sortProperties: ['priority', 'when_moved'],
     sortAscending: true
 });
