@@ -6,13 +6,18 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
   </head>
   <body>
+
+    <script type="text/x-handlebars" data-template-name="components/draggable-project">
+      <div draggable="true">
+        {{project.summary}} - {{project.priority}}
+      </div>
+    </script>
+
     <h1>Project Priorities</h1>
     <script type="text/x-handlebars" data-template-name="project">
-    {{#each}}
-    <li draggable="true">
-      {{summary}}
-    </li>
-    {{/each}}
+      {{#each content}}
+        {{draggable-project project=this context=controller}}
+      {{/each}}
     </script>
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -20,8 +25,10 @@
   <script src="bower_components/ember/ember.min.js"></script>
   <script src="bower_components/ember-data/ember-data.min.js"></script> 
   <script src="js/application.js"></script>
-  <script src="js/router.js"></script>
   <script src="js/models/project.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/components.js"></script>
 
   </body>
 </html>
