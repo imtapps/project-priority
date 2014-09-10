@@ -15,8 +15,8 @@
 
     <h1>Project Priorities</h1>
     <script type="text/x-handlebars" data-template-name="project">
-      {{#each content}}
-        {{draggable-project project=this context=controller}}
+      {{#each}}
+        {{draggable-project project=this}}
       {{/each}}
     </script>
 
