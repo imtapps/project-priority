@@ -5,27 +5,35 @@ ProjectPriority.Project = DS.Model.extend({
     ticketId: DS.attr('integer')
 });
 
-temp_date = new Date();
 ProjectPriority.Project.FIXTURES = [
     {
         id: 1,
         summary: 'ticket #1',
-        priority: 0,
-        when_moved: temp_date,
+        priority: 10000,
         ticketId: 12345
     },
     {
         id: 2,
         summary: 'ticket #2',
-        priority: 0,
-        when_moved: temp_date,
+        priority: 20000,
         ticketId: 23456
     },
     {
         id: 3,
         summary: 'ticket #3',
-        priority: 0,
-        when_moved: temp_date,
+        priority: 30000,
         ticketId: 34567
-    }
+    },
+    {
+        id: 4,
+        summary: 'ticket #4',
+        priority: 40000,
+        ticketId: 34567
+    },
+    {
+        id: 5,
+        summary: 'ticket #5',
+        priority: 50000,
+        ticketId: 34567
+    },
 ];
